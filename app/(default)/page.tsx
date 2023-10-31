@@ -11,7 +11,7 @@ import Testimonials from '@/components/testimonials'
 import Service23 from '@/components/service'
 import Tabs from '@/components/tabs'
 import Numbers6 from '@/components/numbers'
-import Tempheader from '@/components/tempheader'
+// import Tempheader from '@/components/tempheader'
 
 export default function Home() {
   return (
