@@ -16,7 +16,7 @@ import Tempheader from '@/components/tempheader'
 export default function Home() {
   return (
     <>
-   <Tempheader/> 
+   {/* <Tempheader/>  */}
       {/* <Hero /> */}
       <Service23/>
       <Features />
