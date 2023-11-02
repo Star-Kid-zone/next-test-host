@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 *{
   margin:0;
   padding:0;
@@ -20,7 +22,7 @@ body{
   height:100%;
   background-color:$white;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;  
+  font-family: 'Inter', sans-serif;  
 }
 header{
   @extend .dflex;
@@ -137,7 +139,7 @@ header{
     }
     .btn_group{
       @extend .dflex;
-      width:70%;
+      width:80%;
       justify-content: space-between;
       .btn{
         @extend .dflex;
@@ -302,4 +304,107 @@ header{
       }
     }
   }
+}
+
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+  .content_wrapper{
+    width:90%;
+    margin:0 auto;
+    @extend .dflex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    flex-direction: column-reverse;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    border-radius: 16px;
+    padding:3%;
+    margin: 10% 5% 5% 5%;
+    .left_content_wrapper{
+      width:80%;
+      h2{
+        font-size:2rem;
+        font-weight: 600;
+        line-height: 1.3;
+        overflow: hidden;
+        color: white;
+        span{
+          display: inline-block;  
+          span.second{
+            margin-left:10px;
+          }      
+        }
+      }
+      p{
+        font-size:1.125rem;
+        color:#dbdbdb;
+        margin:20px 0 30px 0;
+      }
+      .btn_group{
+        @extend .dflex;
+        width:100%;
+        justify-content: space-between;
+        .btn{
+          @extend .dflex;
+          width:48%;
+          height:56px;
+          font-size: 20px;
+          border-radius: 8px;
+          font-weight: 600;
+          &.btn_primary{
+            background-color: $black;
+            color:$white;
+            svg{
+              margin-left:8px;
+            }
+          }
+          &.btn_secondary{
+            background-color:$white;
+            color:$black;
+            border:1px solid $black;
+          }
+        }
+      }
+      .review_container{
+        margin-top:50px;
+        p.total_review{
+          font-weight: 600;
+          font-size: 20px;
+          color:white;
+          margin:0;
+        }
+        p.more_review{
+          color:#ffffff;
+          font-weight: 400;
+          font-size: 16px;
+          margin:20px 0 0;
+        }
+        span{
+          display:inline-flex;
+          @extend .dflex;
+          width:30px;
+          height:30px;
+          background-color: $dark_green;
+          border-radius: 8px;
+          margin-top: 10px;
+          +span{
+            margin-left:8px;
+          }
+        }
+      }
+    }
+    .right_content_wrapper{
+      width:100%;
+      @extend .dflex;
+      justify-content: flex-start;
+      img{
+        display: block;
+        width:100%;
+      }
+    }
+  }
+
+
 }
